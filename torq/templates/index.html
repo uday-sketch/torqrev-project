@@ -1,0 +1,649 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <!-- meta data -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Rufina:400,700"
+      rel="stylesheet"
+    />
+
+    <!-- title of site -->
+    <title>TorqRev</title>
+
+    <!-- For favicon png -->
+    <link
+      rel="shortcut icon"
+      type="image/icon"
+      href="{% static '/logo/favicon.png' %}"
+    />
+
+    <!--font-awesome.min.css-->
+    <link rel="stylesheet" href="{% static '/css/font-awesome.min.css' %}" />
+
+    <!--linear icon css-->
+    <link rel="stylesheet" href="{% static '/css/linearicons.css' %}" />
+
+    <!--flaticon.css-->
+    <link rel="stylesheet" href="{% static '/css/flaticon.css' %}" />
+
+    <!--animate.css-->
+    <link rel="stylesheet" href="{% static '/css/animate.css' %}" />
+
+    <!--owl.carousel.css-->
+    <link rel="stylesheet" href="{% static '/css/owl.carousel.min.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static '/css/owl.theme.default.min.css' %}"
+    />
+
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}" />
+
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="{% static '/css/bootsnav.css' %}" />
+
+    <!--style.css-->
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+
+    <!--responsive.css-->
+    <link rel="stylesheet" href="{% static '/css/responsive.css' %}" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <section id="home" class="welcome-hero">
+      <div class="top-area">
+        <div class="header-area">
+          <nav
+            class="navbar navbar-default bootsnav navbar-sticky navbar-scrollspy"
+            data-minus-value-desktop="70"
+            data-minus-value-mobile="55"
+            data-speed="1000"
+          >
+            <div class="container">
+              <div class="navbar-header">
+                <button
+                  type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target="#navbar-menu"
+                >
+                  <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/index/">TorqRev</a>
+              </div>
+
+              <div
+                class="collapse navbar-collapse menu-ui-design"
+                id="navbar-menu"
+              >
+                <ul
+                  class="nav navbar-nav navbar-right"
+                  data-in="fadeInDown"
+                  data-out="fadeOutUp"
+                >
+                  <li ><a href="/index/">home</a></li>
+                  <li ><a href="/service/">service</a></li>
+                  <!-- <li class="scroll">
+                    <a href="#featured-cars">featured</a>
+                  </li> -->
+                  <!-- <li class="scroll"><a href="#new-cars">new cars</a></li> -->
+                  <li><a href="#brand">brands</a></li>
+                  <li><a href="/register/">Register</a></li>
+                  <!-- <li><a href="/login/">Login</a></li> -->
+                  <li>
+                    <a href="/view_pro/">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- <div class="clearfix"></div> -->
+      </div>
+
+      <div class="container">
+        <div class="welcome-hero-txt">
+          <h2>get your desired products in resonable price</h2>
+
+          <div class="sign-wrapper">
+            <button
+              class="welcome-btn"
+              onclick="window.location.href='/register/'"
+            >
+              <span>Register</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured-sec" class="featured-sec">
+      <div class="container swiper">
+        <div class="section-header">
+          <h2>featured bikes</h2>
+        </div>
+        <div class="slider-wrapper">
+          <div class="card-list swiper-wrapper">
+            <div class="card-item swiper-slide">
+              <div class="img-box">
+                <div class="bikes-img">
+                  <img
+                    src="https://www.royalenfield.com/content/dam/royal-enfield/motorcycles/new-classic-350/studio-shots/new/emerald-000.png"
+                    alt="cars"
+                  />
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2><a href="#">Royal Enfield classic 350</a></h2>
+                <h3>INR 2,30,000</h3>
+              </div>
+            </div>
+
+            <div class="card-item swiper-slide">
+              <div class="img-box">
+                <div class="bikes-img">
+                  <img
+                    src="https://www.royalenfield.com/content/dam/royal-enfield/india/motorcycles/continental-gt/new/colours/studio-shots/slipstream-blue/new/slipstream_blue_0000.png"
+                    alt="cars"
+                  />
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2>
+                  <a href="#">Royal Enfield Continental GT 650</a>
+                </h2>
+                <h3>INR 3,39,000</h3>
+              </div>
+            </div>
+
+            <div class="card-item swiper-slide">
+              <div class="img-box">
+                <div class="bikes-img">
+                  <img
+                    src="https://cdn.bajajauto.com/-/media/assets/bajajauto/bikes/pulsar-ns400-2024/ns400z-bike.png"
+                    alt="cars"
+                  />
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2>
+                  <a href="#">Pulsar NS400Z</a>
+                </h2>
+                <h3>INR 1,85,000</h3>
+              </div>
+            </div>
+
+            <div class="card-item swiper-slide">
+              <div class="img-box">
+                <div class="bikes-img">
+                  <img
+                    src="https://www.royalenfield.com/content/dam/royal-enfield/motorcycles/himalayan/colors/new-studio-shots/hanle-black-tubeless/hanle-black-tubeless-000.webp"
+                    alt="cars"
+                  />
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2>
+                  <a href="#">Royal Enfield Himalayan 450</a>
+                </h2>
+                <h3>INR 2,98,000</h3>
+              </div>
+            </div>
+
+            <div class="card-item swiper-slide">
+              <div class="img-box">
+                <div class="bikes-img">
+                  <img
+                    src="https://www.royalenfield.com/content/dam/royal-enfield/motorcycles/himalayan/colors/new-studio-shots/hanle-black-tubeless/hanle-black-tubeless-000.webp"
+                    alt="cars"
+                  />
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2>
+                  <a href="#">Royal Enfield Himalayan 450</a>
+                </h2>
+                <h3>INR 2,98,000</h3>
+              </div>
+            </div>
+
+            <div class="card-item swiper-slide">
+              <div class="img-box">
+                <div class="bikes-img">
+                  <img
+                    src="https://www.royalenfield.com/content/dam/royal-enfield/motorcycles/himalayan/colors/new-studio-shots/hanle-black-tubeless/hanle-black-tubeless-000.webp"
+                    alt="cars"
+                  />
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2>
+                  <a href="#">Royal Enfield Himalayan 450</a>
+                </h2>
+                <h3>INR 2,98,000</h3>
+              </div>
+            </div>
+
+            <div class="card-item swiper-slide">
+              <div class="img-box">
+                <div class="bikes-img">
+                  <img
+                    src="https://www.royalenfield.com/content/dam/royal-enfield/motorcycles/himalayan/colors/new-studio-shots/hanle-black-tubeless/hanle-black-tubeless-000.webp"
+                    alt="cars"
+                  />
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2>
+                  <a href="#">Royal Enfield Himalayan 450</a>
+                </h2>
+                <h3>INR 2,98,000</h3>
+              </div>
+            </div>
+
+            <div class="card-item swiper-slide">
+              <div class="img-box">
+                <div class="bikes-img">
+                  <img
+                    src="https://www.royalenfield.com/content/dam/royal-enfield/motorcycles/himalayan/colors/new-studio-shots/hanle-black-tubeless/hanle-black-tubeless-000.webp"
+                    alt="cars"
+                  />
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2>
+                  <a href="#">Royal Enfield Himalayan 450</a>
+                </h2>
+                <h3>INR 2,98,000</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="swiper-pagination"></div> -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+      <div class="container swiper">
+        <div class="section-header">
+          <h2>featured cars</h2>
+        </div>
+        <div class="slider-wrapper">
+          <div class="card-list swiper-wrapper">
+            <div class="card-item swiper-slide">
+              <div class="img-box">
+                <div class="cars-img">
+                  <img
+                    src="https://www.marutisuzuki.com/js/arenabrandjs/threesixtyjs/img/blue_black_dual_tone/suzuki_swift_ext_360_blue_black_dual_tone_v-1_6.webp"
+                    alt="cars"
+                  />
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2>
+                  <a href="#">infiniti <span>z5</span></a>
+                </h2>
+                <h3>$36,850</h3>
+              </div>
+            </div>
+
+            <div class="card-item swiper-slide">
+              <div class="img-box">
+                <div class="cars-img">
+                  <img
+                    src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Creta/360/abyss-black/pc/abyss-black_5.png"
+                    alt="hyundai"
+                  />
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2>
+                  <a href="#">porsche <span>718</span> cayman</a>
+                </h2>
+                <h3>$48,500</h3>
+              </div>
+            </div>
+
+            <div class="card-item swiper-slide">
+              <div class="img-box">
+                <div class="cars-img">
+                  <img
+                    src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Verna/360/starry-night/pc/starry-night_5.png"
+                    alt="cars"
+                  />
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2>
+                  <a href="#"><span>bmw 8-</span>series coupe</a>
+                </h2>
+                <h3>$56,000</h3>
+              </div>
+            </div>
+
+            <div class="card-item swiper-slide">
+              <div class="img-box">
+                <div class="cars-img">
+                  <img
+                    src="https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-2545xM4RIyFnbm9Mb3AgyyIJrjG0suyJRBODlsrjGpuaprQbhSIqppglBg3Rnvl384MlficYiGHqoQxYLW7%25f3tiJ0PCJirQbLDWcQW7%251uS39qoQh47wMvcYi9kQwVMb3islBglUbudcRScHz1bMbnMdoV3yJGy53LSrQ%25r9YbJW8zWunJEqogqaGCel3ilU%25FjcRScHzqjMbnMdemRyJGy5m3SrQ%25r9sifW8zWuoYEqogqa3Jul3ilURQGcRScHbzBMbnMdJgAyJGy5QJNrQ%25r98eFW8zWuuRQqogqaakel38F5MIlBgL%250Pl38Uir3%25cYiA7QRWARj93N"
+                    alt="cars"
+                  />
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2>
+                  <a href="#">BMW <span> x</span>series-6 swiper-slide</a>
+                </h2>
+                <h3>$75,800</h3>
+              </div>
+            </div>
+
+            <div class="card-item swiper-slide">
+              <div class="img-box">
+                <div class="cars-img">
+                  <img
+                    src="https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-2545xM4RIyFnbm9Mb3AgyyIJrjG0suyJRBODlsrjGpuaprQbhSIqppglBg3Rnvl384MlficYiGHqoQxYLW7%25f3tiJ0PCJirQbLDWcQW7%251uS39qoQh47wMvcYi9kQwVMb3islBglUbudcRScHz1bMbnMdoV3yJGy53LSrQ%25r9YbJW8zWunJEqogqaGCel3ilU%25FjcRScHzqjMbnMdemRyJGy5m3SrQ%25r9sifW8zWuoYEqogqa3Jul3ilURQGcRScHbzBMbnMdJgAyJGy5QJNrQ%25r98eFW8zWuuRQqogqaakel38F5MIlBgL%250Pl38Uir3%25cYiA7QRWARj93N"
+                    alt="cars"
+                  />
+                </div>
+              </div>
+              <div class="featured-cars-txt">
+                <h2>
+                  <a href="#">BMW <span> x</span>series-6 swiper-slide</a>
+                </h2>
+                <h3>$75,800</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="swiper-pagination"></div> -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="clients-say" class="clients-say">
+      <div class="container">
+        <div class="section-header">
+          <h2>Upcoming Bikes</h2>
+        </div>
+        <div class="row">
+          <div class="owl-carousel testimonial-carousel">
+            <div class="col-sm-3 col-xs-12">
+              <div class="single-testimonial-box">
+                <div class="testimonial-description">
+                  <div class="testimonial-info">
+                    <div class="testimonial-img">
+                      <img
+                        src="{% static '/images/clients/classic-350-right-side-view-62.png' %}"
+                        alt="image of clients person"
+                      />
+                    </div>
+                  </div>
+                  <div class="testimonial-comment">
+                    <p>
+                      Sed ut pers unde omnis iste natus error sit voluptatem
+                      accusantium dolor laudan rem aperiam, eaque ipsa quae ab
+                      illo inventore verit.
+                    </p>
+                  </div>
+                  <div class="testimonial-person">
+                    <h2><a href="#">tomas lili</a></h2>
+                    <h4>new york</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 col-xs-12">
+              <div class="single-testimonial-box">
+                <div class="testimonial-description">
+                  <div class="testimonial-info">
+                    <div class="testimonial-img">
+                      <img
+                        src="{% static '/images/clients/c2.png' %}"
+                        alt="image of clients person"
+                      />
+                    </div>
+                  </div>
+                  <div class="testimonial-comment">
+                    <p>
+                      Sed ut pers unde omnis iste natus error sit voluptatem
+                      accusantium dolor laudan rem aperiam, eaque ipsa quae ab
+                      illo inventore verit.
+                    </p>
+                  </div>
+                  <div class="testimonial-person">
+                    <h2><a href="#">romi rain</a></h2>
+                    <h4>london</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 col-xs-12">
+              <div class="single-testimonial-box">
+                <div class="testimonial-description">
+                  <div class="testimonial-info">
+                    <div class="testimonial-img">
+                      <img
+                        src="{% static '/images/clients/c3.png' %}"
+                        alt="image of clients person"
+                      />
+                    </div>
+                  </div>
+                  <div class="testimonial-comment">
+                    <p>
+                      Sed ut pers unde omnis iste natus error sit voluptatem
+                      accusantium dolor laudan rem aperiam, eaque ipsa quae ab
+                      illo inventore verit.
+                    </p>
+                  </div>
+                  <div class="testimonial-person">
+                    <h2><a href="#">john doe</a></h2>
+                    <h4>washington</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="brand" class="brand">
+      <div class="container">
+        <div class="brand-area">
+          <div class="owl-carousel owl-theme brand-item">
+            <div class="item">
+              <a href="#">
+                <img
+                  src="{% static '/images/brand/br1.png' %}"
+                  alt="brand-image"
+                />
+              </a>
+            </div>
+            <div class="item">
+              <a href="#">
+                <img
+                  src="{% static '/images/brand/br2.png' %}"
+                  alt="brand-image"
+                />
+              </a>
+            </div>
+            <div class="item">
+              <a href="#">
+                <img
+                  src="{% static '/images/brand/br3.png' %}"
+                  alt="brand-image"
+                />
+              </a>
+            </div>
+            <div class="item">
+              <a href="#">
+                <img
+                  src="{% static '/images/brand/br4.png' %}"
+                  alt="brand-image"
+                />
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="#">
+                <img
+                  src="{% static '/images/brand/br5.png' %}"
+                  alt="brand-image"
+                />
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="#">
+                <img
+                  src="{% static '/images/brand/br6.png' %}"
+                  alt="brand-image"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="blog"></section>
+
+    <footer id="contact" class="contact">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 swiper-slide">
+              <div class="single-footer-widget">
+                <div class="footer-logo">
+                  <a href="/index/">TorqRev</a>
+                </div>
+                <p>
+                  Ased do eiusm tempor incidi ut labore et dolore magnaian
+                  aliqua. Ut enim ad minim veniam.
+                </p>
+                <div class="footer-contact">
+                  <p>info@themesine.com</p>
+                  <p>+1 (885) 2563154554</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-6 swiper-slide">
+              <div class="single-footer-widget">
+                <h2>about devloon</h2>
+                <ul>
+                  <li><a href="#">about us</a></li>
+                  <li><a href="#">career</a></li>
+                  <li>
+                    <a href="#">terms <span> of service</span></a>
+                  </li>
+                  <li><a href="#">privacy policy</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-offset-1 col-md-3 col-sm-6 swiper-slide">
+              <div class="single-footer-widget">
+                <h2>news letter</h2>
+                <div class="footer-newsletter">
+                  <p>Subscribe to get latest news update and informations</p>
+                </div>
+                <div class="hm-foot-email">
+                  <div class="foot-email-box">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Add Email"
+                    />
+                  </div>
+                  <div class="foot-email-subscribe">
+                    <span><i class="fa fa-arrow-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="row">
+            <div class="col-sm-6 swiper-slide">
+              <p>
+                &copy; copyright.designed and developed by
+                <a href="https://www.themesine.com/">themesine</a>.
+              </p>
+            </div>
+            <div class="col-sm-6 swiper-slide">
+              <div class="footer-social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                <a href="#"><i class="fa fa-behance"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="scroll-Top">
+        <div class="return-to-top">
+          <i
+            class="fa fa-angle-up"
+            id="scroll-top"
+            data-toggle="tooltip"
+            data-placement="top"
+            title=""
+            data-original-title="Back to Top"
+            aria-hidden="true"
+          ></i>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{% static '/js/jquery.js' %}"></script>
+
+    <!--modernizr.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <!--bootstrap.min.js-->
+    <script src="{% static '/js/bootstrap.min.js' %}"></script>
+
+    <!-- bootsnav js -->
+    <script src="{% static '/js/bootsnav.js' %}"></script>
+
+    <!--owl.carousel.js-->
+    <script src="{% static '/js/owl.carousel.min.js' %}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <!--Custom JS-->
+    <script src="{% static '/js/custom.js' %}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="../static/js/cardslider.js"></script>
+  </body>
+</html>

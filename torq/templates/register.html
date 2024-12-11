@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static '/css/register.css' %}" />
+  </head>
+  <body>
+    <div class="form-container">
+      <p class="title">Join Us</p>
+      <form method="post" class="form">
+        {% csrf_token %} {% if msg %}
+        <p>{{ msg }}</p>
+        {% endif %}
+
+        <div class="input-group">
+          <input type="text" name="name" id="name" placeholder="Full Name" />
+        </div>
+        
+        <div class="input-group">
+          <input type="email" name="email" id="email" placeholder="Email" />
+        </div>
+        
+        <div class="input-group">
+          <input type="tel" name="phone" id="phone" placeholder="Phone" />
+        </div>
+        
+        <div class="input-group">
+          <!-- <input type="select box" name="role" id="role" placeholder="Role" /> -->
+          <select name="role" required id="role" placeholder="Role">
+            <option value="CUSTOMER">Customer</option>
+            <option value="SELLER">Seller</option>
+            <option value="ADMIN">Admin</option>
+        </select>
+        </div>
+
+        <div class="input-group">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="password"
+          />
+
+        </div>
+        <div class="sign-wrapper">
+          <button class="sign"><span>Register</span></button>
+        </div>
+      </form>
+      <div class="social-message">
+        <div class="line"></div>
+        <p class="message">Login with social accounts</p>
+        <div class="line"></div>
+      </div>
+      <div class="social-icons">
+        <!-- Social icons here -->
+      </div>
+      <p class="signup">
+        <a rel="noopener noreferrer" href="/login/" class=""
+          >Already have an account!</a
+        >
+      </p>
+    </div>
+
+    <div class="carousel-background"></div>
+
+    <script>
+      const formContainer = document.querySelector(".form-container");
+      const carouselBackground = document.querySelector(".carousel-background");
+
+      // Function to fade in the background
+      function fadeInBackground() {
+        carouselBackground.style.opacity = "0"; // Fully visible
+      }
+
+      // Function to fade out the background
+      function fadeOutBackground() {
+        carouselBackground.style.opacity = "1"; // Fully hidden
+      }
+
+      // Add event listeners for hover effects
+      formContainer.addEventListener("mouseenter", fadeOutBackground); // On hover, fade out
+      formContainer.addEventListener("mouseleave", fadeInBackground); // On mouse leave, fade in
+    </script>
+  </body>
+</html>

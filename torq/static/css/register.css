@@ -1,0 +1,245 @@
+body {
+  background: url(../images/new_background/chad-kirchoff-xe-e69j6-Ds-unsplash.jpg) no-repeat center center;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-size: cover;
+}
+
+body:before {
+  position: absolute;
+  content: "";
+  background: rgba(70, 52, 78, 0.6);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.form-container {
+  width: 320px;
+  border-radius: 0.75rem;
+  border: 1px solid #46344e;
+  background-color: white;
+  padding: 2rem;
+  color: #46344e;
+}
+
+.title {
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.form {
+  margin-top: 1.5rem;
+}
+
+.input-group {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* .input-group label {
+        display: block;
+        color: #46344e;
+        margin-bottom: 4px;
+    } */
+
+.input-group input, select{
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid #46344e;
+  outline: 0;
+  background-color: white;
+  padding: 0.75rem 1rem;
+  color: black;
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+/* .input-group input:focus {
+        border-color: rgba(167, 139, 250);
+    } */
+
+.forgot {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgb(0, 0, 0);
+  margin: 8px 0 14px 0;
+}
+
+.forgot a,
+.signup a {
+  color: #46344e;
+  font-weight: 510;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot a:hover,
+.signup a:hover {
+  font-weight: 510;
+  color: #e64833;
+  text-decoration: underline #e64833;
+}
+
+.sign-wrapper {
+  width: 100%;
+  /* position: fixed; */
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+}
+
+/* Adjusting the Signup Button */
+.sign {
+  display: block;
+  width: 100%;
+  background-color: white;
+  padding: 0.75rem;
+  text-align: center;
+  color: #46344e; /* Initial text color */
+  border: 1px solid #46344e;
+  border-radius: 5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+  transition: all 0.3s;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+.sign span {
+  position: relative;
+  z-index: 1;
+}
+
+.sign:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 5px;
+  background: #46344e;
+  transition: all 0.3s;
+  z-index: 0;
+}
+
+.sign:hover {
+  color: white; /* Change text color to white when hovering */
+  cursor: pointer;
+}
+
+.sign:hover:after {
+  width: 100%;
+}
+
+
+.social-message {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.line {
+  height: 1px;
+  flex: 1 1 0%;
+  background-color: #46344e;
+}
+
+.social-message .message {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #46344e;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons .icon {
+  border-radius: 0.125rem;
+  padding: 0.75rem;
+  border: none;
+  background-color: transparent;
+  margin-left: 8px;
+}
+
+.social-icons .icon svg {
+  height: 1.25rem;
+  width: 1.25rem;
+  fill: white;
+}
+
+.signup {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 550;
+  line-height: 1rem;
+  color: white;
+}
+/* .socials {
+    text-decoration: none;
+  } */
+
+/* Carousel background */
+.carousel-background {
+  position: fixed;
+  /* background-position: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; */
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/new_background/grant-porter-O7qK1vQY3p0-unsplash.jpg) no-repeat center center; /* Background color */
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out; /* Smooth transition for fading effect */
+  /* z-index: -1; */
+}
+
+.carousel-background:before {
+  position: absolute;
+  content: "";
+  background: rgba(70, 52, 78, 0.6);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Default form container style */
+.form-container {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth shadow and transform transitions */
+  transform: translateZ(0) scale(1); /* Default 3D position */
+}
+
+/* Box shadow and 3D effect when hovering */
+.form-container:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 10px 10px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+  transform: translateZ(100px) scale(1.05); /* Moves the form towards the viewer and enlarges it slightly */
+}
+
+.form-container:hover + .carousel-background {
+  opacity: 1; /* Make background visible */
+}

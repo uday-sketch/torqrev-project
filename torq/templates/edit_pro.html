@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            background: -webkit-linear-gradient(left, #502c6e, #28345c);
+            font-family: Arial, sans-serif;
+        }
+        .emp-profile {
+            padding: 3%;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            border-radius: 0.5rem;
+            background: #645e97;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        .profile-img {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-img img {
+            width: 150px;
+            border-radius: 50%;
+        }
+        .profile-img .file {
+            position: relative;
+            overflow: hidden;
+            margin-top: 10px; /* Adjusted the margin */
+            width: 50%; /* Resized the Add Photo button */
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            background: #212529b8;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .profile-img .file input {
+            position: absolute;
+            opacity: 0;
+            right: 0;
+            top: 0;
+        }
+        .profile-head h3 {
+            color: #333;
+            text-align: center;
+        }
+        .profile-edit-btn {
+            background: transparent;
+            border: 1px solid #faed26;
+            border-radius: 5px;
+            width: 100%; /* Button spans full width */
+            padding: 8px;
+            font-weight: 600;
+            color: #d3d01c;
+            text-align: center;
+        }
+        .profile-edit-btn:hover {
+            background: #faed26;
+            border: 1px solid #faed26;
+            color: #fff;
+            cursor: pointer;
+        }
+        .profile-head .nav-tabs {
+            margin-bottom: 5%;
+        }
+        .profile-head .nav-tabs .nav-link {
+            font-weight: 600;
+            border: none;
+        }
+        .profile-head .nav-tabs .nav-link.active {
+            border-bottom: 2px solid #0062cc;
+        }
+        .profile-tab label {
+            font-weight: 600;
+        }
+        .profile-tab input, 
+        .profile-tab select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .profile-tab input:focus, 
+        .profile-tab select:focus {
+            border-color: #0062cc;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 98, 204, 0.5);
+        }
+        .profile-tab p {
+            font-weight: 600;
+        }
+        /* Center the form container */
+        .form-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        /* Centering the input fields */
+        .center-inputs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 70%; /* Adjust width */
+            margin: auto;
+        }
+    </style>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container emp-profile">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-container">
+            <!-- Image and Profile Photo Section -->
+            <div class="profile-img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                <div class="file btn btn-lg btn-primary">
+                    Add Photo
+                    <input type="file" name="image"/>
+                </div>
+            </div>
+
+            <!-- Input Fields Centered in the Form -->
+            <div class="center-inputs">
+                <div class="profile-head">
+                    <h3>Edit PROFILE</h3>
+                </div>
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Name</label>
+                                <input type="text" name="name" placeholder="Enter your name*">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Phone</label>
+                                <input type="tel" name="phone" placeholder="Enter your Number*">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Role</label>
+                                <select name="role">
+                                    <option value="admin">Admin</option>
+                                    <option value="customer">Customer</option>
+                                    <option value="seller">Seller</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Address</label>
+                                <input type="text" name="address" placeholder="Enter your address*">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Save Button Below Input Fields -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="/view_pro/" class="profile-edit-btn" >cancel</a>
+                    </div> 
+                    <div class="col-md-12">
+                        <button type="submit" class="profile-edit-btn" >Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>           
+</div>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
